@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<link href ="style.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<script src="https://code.jquery.com/jquery-git2.js"></script>
+
+<html>
+<head>
+	<title>Daena's Awesome Marketing Page</title>
+</head>
+
+<body>
+	<h2 class="projectname">Project name</h2>
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Projects</a></li>
+		<li><a href="#">Services</a></li>
+		<li><a href="#">Downloads</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+	<h1>Marketing Stuff!</h1>
+	<p class ="intro">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
+	<button class="intro-button">Get started today</button>
+	<div>
+	<article>
+		<h2>Heading</h2>
+		<p class = "hide">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+		<button class="bottom">View details >></button>
+	</article>
+
+	<article>
+		<h2>Heading</h2>
+		<p class="hide">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+		<button class="bottom">View details >></button>
+	</article>
+
+	<article>
+		<h2>Heading</h2>
+		<p class="hide">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+		<button class="bottom">View details >></button>
+	</article>
+	<div style="clear:both"></div>
+	</div>
+	<p class = "footer">Company 2014</p>
+
+</body>
+</html>
+
+<script>
+
+$("a").hover(function(){
+  $(this).css("color","blue");
+  },function(){
+  $(this).css("color","#777");
+});
+
+$("a").click(function(){
+  $(this).toggleClass("clicked");
+  });
+
+$(".intro-button").click(function(){
+	 var name = prompt("What is your name?");
+	 if(name){
+	 	$('h1').html("Hello " + name +"!!");
+	 }
+});
+
+$(".bottom").click(function(){
+	$(this).siblings("p").slideToggle();
+});
+
+</script>
